@@ -64,41 +64,6 @@ public class MainFrame extends BaseFrame {
 	public static void main ( String[] args ) throws Exception {
 		System.setErr(System.out);
 
-		try {
-			Class.forName("javax.xml.parsers.DocumentBuilder");
-
-			try {
-				// J2SE 1.4
-				Class.forName("org.apache.crimson.tree.XmlDocument");
-			} catch ( ClassNotFoundException exception ) {
-				// JAXP 1.0.1
-				Class.forName("com.sun.xml.tree.XmlDocument");
-			}
-		} catch ( ClassNotFoundException exception ) {
-			JaxpNotFoundDialog dialog = new JaxpNotFoundDialog();
-
-			String[] messages = dialog.getMessages();
-			for (int i = 0 ; i < messages.length ; i++)
-				System.err.println(messages[i]);
-			System.err.println("");
-
-			dialog.show(null);
-
-			System.exit(1);
-		}
-
-		try {
-			Class.forName("com.sun.jimi.core.Jimi");
-		} catch ( ClassNotFoundException exception ) {
-			JimiNotFoundDialog dialog = new JimiNotFoundDialog();
-
-			String[] messages = dialog.getMessages();
-			for (int i = 0 ; i < messages.length ; i++)
-				System.err.println(messages[i]);
-			System.err.println("");
-
-			dialog.show(null);
-		}
 
 		ImageIcon icon = Resource.getSystemIcon();
 		SplashScreen splash_screen = new SplashScreen(icon);

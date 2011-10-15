@@ -29,33 +29,6 @@ public class Main {
 	{
 		System.setErr(System.out);
 
-		try {
-			Class.forName("javax.xml.parsers.DocumentBuilder");
-
-			try {
-				// J2SE 1.4
-				Class.forName("org.apache.crimson.tree.XmlDocument");
-			} catch ( ClassNotFoundException exception ) {
-				// JAXP 1.0.1
-				Class.forName("com.sun.xml.tree.XmlDocument");
-			}
-		} catch ( ClassNotFoundException exception ) {
-			String[] messages = JaxpNotFoundDialog.getMessages();
-			for (int i = 0 ; i < messages.length ; i++)
-				System.err.println(messages[i]);
-			System.err.println("");
-
-			System.exit(1);
-		}
-
-		try {
-			Class.forName("com.sun.jimi.core.Jimi");
-		} catch ( ClassNotFoundException exception ) {
-			String[] messages = JimiNotFoundDialog.getMessages();
-			for (int i = 0 ; i < messages.length ; i++)
-				System.err.println(messages[i]);
-			System.err.println("");
-		}
 
 		String[] messages = Resource.getVersionAndCopyright();
 		for (int i = 0 ; i < messages.length ; i++)

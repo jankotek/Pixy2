@@ -1,5 +1,6 @@
 Sat Oct 16 2011, Jan Kotek
     * Make Pixy2 compilable on recent Java. Remamed 'enum' variables to 'enum2'. Also solved import conflict with 'java.awt.desktop'
+    * Remove checks for XML libraries (are already part of JRE) and JIMI (to be replaced by Java2D)
 
 Sun Jul 15 01:55:38 JST 2007  Seiichi Yoshida (comet@aerith.net)
 
