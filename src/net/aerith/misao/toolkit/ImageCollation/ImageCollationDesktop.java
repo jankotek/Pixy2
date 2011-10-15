@@ -13,6 +13,8 @@ import javax.swing.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
+import net.aerith.misao.gui.Desktop;
 import net.aerith.misao.image.*;
 import net.aerith.misao.image.filter.*;
 import net.aerith.misao.gui.*;

@@ -6,6 +6,8 @@
  */
 
 package net.aerith.misao.toolkit.AdditionalIdentification;
+
+import net.aerith.misao.gui.Desktop;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;

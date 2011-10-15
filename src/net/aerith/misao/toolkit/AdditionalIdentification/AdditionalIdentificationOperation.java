@@ -135,10 +135,10 @@ public class AdditionalIdentificationOperation extends ReportBatchOperation {
 				}
 				reader_delete.close();
 
-				Enumeration enum = hash.keys();
+				Enumeration enum2 = hash.keys();
 				Vector list = new Vector();
-				while (enum.hasMoreElements())
-					list.addElement(enum.nextElement());
+				while (enum2.hasMoreElements())
+					list.addElement(enum2.nextElement());
 
 				dialog2 = new CatalogSelectionDialog(list);
 			} catch ( Exception exception ) {

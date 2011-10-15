@@ -223,10 +223,10 @@ public class XmlData extends net.aerith.misao.xml.relaxer.XmlData {
 			}
 		}
 
-		Enumeration enum = hash.keys();
+		Enumeration enum2 = hash.keys();
 		Vector list = new Vector();
-		while (enum.hasMoreElements())
-			list.addElement(enum.nextElement());
+		while (enum2.hasMoreElements())
+			list.addElement(enum2.nextElement());
 
 		return list;
 	}
@@ -252,10 +252,10 @@ public class XmlData extends net.aerith.misao.xml.relaxer.XmlData {
 			}
 		}
 
-		Enumeration enum = hash.keys();
+		Enumeration enum2 = hash.keys();
 		Vector list = new Vector();
-		while (enum.hasMoreElements())
-			list.addElement(enum.nextElement());
+		while (enum2.hasMoreElements())
+			list.addElement(enum2.nextElement());
 
 		return list;
 	}
@@ -281,10 +281,10 @@ public class XmlData extends net.aerith.misao.xml.relaxer.XmlData {
 			}
 		}
 
-		Enumeration enum = hash.keys();
+		Enumeration enum2 = hash.keys();
 		Vector list = new Vector();
-		while (enum.hasMoreElements()) {
-			String key = (String)enum.nextElement();
+		while (enum2.hasMoreElements()) {
+			String key = (String)enum2.nextElement();
 			CatalogStar star = (CatalogStar)hash.get(key);
 			String[] names = star.getCatalogNamesWithMagnitudeSystem();
 			for (int i = 0 ; i < names.length ; i++)
@@ -315,10 +315,10 @@ public class XmlData extends net.aerith.misao.xml.relaxer.XmlData {
 			}
 		}
 
-		Enumeration enum = hash.keys();
+		Enumeration enum2 = hash.keys();
 		Vector list = new Vector();
-		while (enum.hasMoreElements())
-			list.addElement(enum.nextElement());
+		while (enum2.hasMoreElements())
+			list.addElement(enum2.nextElement());
 
 		return list;
 	}

@@ -6,6 +6,7 @@
  */
 
 package net.aerith.misao.toolkit.PixyDesktop;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -13,6 +14,8 @@ import javax.swing.table.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
+import net.aerith.misao.gui.Desktop;
 import net.aerith.misao.image.*;
 import net.aerith.misao.image.io.*;
 import net.aerith.misao.image.filter.*;

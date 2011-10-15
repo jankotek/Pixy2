@@ -168,10 +168,10 @@ public class MagnitudeSystemSettingDialog extends Dialog {
 		panel_standard_system2.add(panel_standard_system, BorderLayout.WEST);
 
 		Hashtable hash_formula = MagnitudeSystem.getDefaultMagnitudeSystemFormula();
-		Enumeration enum = hash_formula.keys();
+		Enumeration enum2 = hash_formula.keys();
 		Vector list_chip = new Vector();
-		while (enum.hasMoreElements())
-			list_chip.addElement(enum.nextElement());
+		while (enum2.hasMoreElements())
+			list_chip.addElement(enum2.nextElement());
 		combo_chip = new JComboBox(list_chip);
 
 		button_help_chip = new JButton("Help");

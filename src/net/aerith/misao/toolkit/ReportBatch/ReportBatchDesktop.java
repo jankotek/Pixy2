@@ -6,7 +6,7 @@
  */
 
 package net.aerith.misao.toolkit.ReportBatch;
-import java.awt.*;
+
 import java.awt.event.*;
 import javax.swing.*;
 import net.aerith.misao.gui.*;
