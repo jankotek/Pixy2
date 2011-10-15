@@ -8,7 +8,7 @@
 package net.aerith.misao.io.filechooser;
 import java.io.*;
 import java.net.*;
-import javax.swing.filechooser.FileFilter;
+
 import net.aerith.misao.image.io.Format;
 import net.aerith.misao.image.UnsupportedFileTypeException;
 import net.aerith.misao.pixy.PluginLoader;
@@ -60,7 +60,7 @@ public abstract class ImageFileFilter extends ExtensionBasedFileFilter {
 	 * @return the list of filters of supported image file formats.
 	 */
 	public static ImageFileFilter[] getSupportedFilters ( ) {
-		JimiFileFilter[] jimi_filters = JimiFileFilter.getSupportedJimiFilters();
+		ImageIOFileFilter[] jimi_filters = ImageIOFileFilter.getSupportedJimiFilters();
 		ImageFileFilter[] plugin_filters = PluginLoader.loadImageFileFilters();
 
 		ImageFileFilter[] filters = new ImageFileFilter[4 + jimi_filters.length + plugin_filters.length];
@@ -85,7 +85,7 @@ public abstract class ImageFileFilter extends ExtensionBasedFileFilter {
 	public static ImageFileFilter[] getBitmapFilters ( ) {
 		int count = 2;
 
-		JimiFileFilter[] jimi_filters = JimiFileFilter.getBitmapJimiFilters();
+		ImageIOFileFilter[] jimi_filters = ImageIOFileFilter.getBitmapJimiFilters();
 
 		ImageFileFilter[] filters = new ImageFileFilter[count + jimi_filters.length];
 

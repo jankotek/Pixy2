@@ -9,7 +9,6 @@ package net.aerith.misao.image.io;
 import java.io.*;
 import java.net.*;
 import net.aerith.misao.image.*;
-import net.aerith.misao.io.filechooser.*;
 
 /**
  * The <code>Gif</code> is a class to read and save GIF file. It is
@@ -20,7 +19,7 @@ import net.aerith.misao.io.filechooser.*;
  * @version 2003 August 4
  */
 
-public class Gif extends JimiFormat {
+public class Gif extends ImageIOFormat {
 	/**
 	 * Constructs a <code>Gif</code> with URL.
 	 * @param url the URL of the Gif file.

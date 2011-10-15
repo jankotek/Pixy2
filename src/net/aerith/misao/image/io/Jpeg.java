@@ -6,10 +6,7 @@
  */
 
 package net.aerith.misao.image.io;
-import java.io.*;
 import java.net.*;
-import net.aerith.misao.image.*;
-import net.aerith.misao.io.filechooser.*;
 
 /**
  * The <code>Jpeg</code> is a class to read and save JPEG file. It is
@@ -20,7 +17,7 @@ import net.aerith.misao.io.filechooser.*;
  * @version 2003 August 4
  */
 
-public class Jpeg extends JimiFormat {
+public class Jpeg extends ImageIOFormat {
 	/**
 	 * Constructs a <code>Jpeg</code> with URL.
 	 * @param url the URL of the JPEG file.

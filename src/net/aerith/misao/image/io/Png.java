@@ -6,10 +6,7 @@
  */
 
 package net.aerith.misao.image.io;
-import java.io.*;
 import java.net.*;
-import net.aerith.misao.image.*;
-import net.aerith.misao.io.filechooser.*;
 
 /**
  * The <code>Png</code> is a class to read and save PNG file. It is
@@ -20,7 +17,7 @@ import net.aerith.misao.io.filechooser.*;
  * @version 2003 August 4
  */
 
-public class Png extends JimiFormat {
+public class Png extends ImageIOFormat {
 	/**
 	 * Constructs a <code>Png</code> with URL.
 	 * @param url the URL of the PNG file.

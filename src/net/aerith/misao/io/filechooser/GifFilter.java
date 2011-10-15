@@ -8,7 +8,7 @@
 package net.aerith.misao.io.filechooser;
 import java.io.*;
 import java.net.*;
-import javax.swing.filechooser.FileFilter;
+
 import net.aerith.misao.image.io.Format;
 import net.aerith.misao.image.io.Gif;
 import net.aerith.misao.image.UnsupportedFileTypeException;
@@ -21,7 +21,7 @@ import net.aerith.misao.image.UnsupportedFileTypeException;
  * @version 2003 August 4
  */
 
-public class GifFilter extends JimiFileFilter {
+public class GifFilter extends ImageIOFileFilter {
 	/**
 	 * Constructs a <code>GifFilter</code>.
 	 */
