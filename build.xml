@@ -1,0 +1,26 @@
+<project name="Pixy2" default="dist" basedir=".">
+
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+
+
+  <target name="dist"  description="generate the distribution" >
+      <delete dir="${build}"/>
+      <mkdir dir="${build}"/>
+
+      <javac srcdir="${src}" destdir="${build}"/>
+
+      <jar destfile="pixy2.jar" >
+          <fileset dir="${src}"/>
+          <fileset dir="${build}"/>
+          <manifest>
+              <attribute name="Main-Class" value="net.aerith.misao.gui.MainFrame"/>
+          </manifest>
+      </jar>
+      <delete dir="${build}"/>
+      <delete file="pixy2.zip"/>
+       <zip destfile="pixy2.zip" basedir="."
+       excludes="src/**, .idea/**, out/**, bin/**, database/**, *.zip" />
+  </target>
+
+</project>
