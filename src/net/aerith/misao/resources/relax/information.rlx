@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="information"/>
+</interface>
+
+<elementRule role="information">
+  <sequence>
+    <element name="path" type="string" occurs="?"/>
+    <ref label="image"/>
+    <ref label="size"/>
+    <ref label="date" occurs="?"/>
+    <ref label="exposure" occurs="?"/>
+    <element name="observer" type="string" occurs="?"/>
+    <ref label="center"/>
+    <ref label="fov"/>
+    <ref label="rotation"/>
+    <ref label="pixel-size"/>
+    <element name="limiting-mag" type="float"/>
+    <element name="upper-limit-mag" type="float" occurs="?"/>
+    <ref label="astrometric-error" occurs="?"/>
+    <element name="photometric-error" type="float" occurs="?"/>
+    <element name="magnitude-translation-formula" type="string" occurs="?"/>
+    <element name="magnitude-correction" type="string" occurs="?"/>
+    <ref label="distortion-field" occurs="?"/>
+    <element name="filter" type="string" occurs="?"/>
+    <element name="chip" type="string" occurs="?"/>
+    <element name="instruments" type="string" occurs="?"/>
+    <element name="base-catalog" type="string"/>
+    <ref label="astrometry" occurs="?"/>
+    <ref label="photometry" occurs="?"/>
+    <ref label="reversed-image" occurs="?"/>
+    <ref label="sbig-image" occurs="?"/>
+    <ref label="unofficial" occurs="?"/>
+    <ref label="star-count" occurs="?"/>
+    <element name="note" type="string" occurs="?"/>
+  </sequence>
+</elementRule>
+<tag name="information"/>
+
+<elementRule role="distortion-field">
+  <sequence>
+    <element name="x" type="string"/>
+    <element name="y" type="string"/>
+  </sequence>
+</elementRule>
+<tag name="distortion-field"/>
+
+<elementRule role="star-count">
+  <sequence>
+    <element name="str" type="int"/>
+    <element name="var" type="int"/>
+    <element name="mov" type="int"/>
+    <element name="new" type="int"/>
+    <element name="err" type="int"/>
+    <element name="neg" type="int"/>
+  </sequence>
+</elementRule>
+<tag name="star-count"/>
+
+</module>

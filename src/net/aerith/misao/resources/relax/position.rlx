@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="position-record"/>
+</interface>
+
+<elementRule role="position-record">
+  <sequence>
+    <ref label="date"/>
+    <ref label="coor"/>
+    <ref label="mag"/>
+    <element name="area" type="int" occurs="?"/>
+    <ref label="pixel-size" occurs="?"/>
+    <ref label="astrometric-error" occurs="?"/>
+    <element name="catalog" type="string" occurs="?"/>
+    <element name="equinox" type="string" occurs="?"/>
+    <element name="observer" type="string"/>
+    <element name="instruments" type="string" occurs="?"/>
+    <element name="image-xml-path" type="string"/>
+    <element name="name" type="string"/>
+    <ref label="position"/>
+    <element name="pixels-from-edge" type="int" occurs="?"/>
+  </sequence>
+</elementRule>
+<tag name="position-record"/>
+
+</module>

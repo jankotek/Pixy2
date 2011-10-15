@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="mag-record"/>
+</interface>
+
+<elementRule role="mag-record">
+  <sequence>
+    <ref label="date"/>
+    <ref label="mag"/>
+    <element name="filter" type="string" occurs="?"/>
+    <element name="chip" type="string" occurs="?"/>
+    <element name="catalog" type="string" occurs="?"/>
+    <element name="observer" type="string"/>
+    <element name="instruments" type="string" occurs="?"/>
+    <element name="image-xml-path" type="string" occurs="?"/>
+    <element name="name" type="string" occurs="?"/>
+    <ref label="position" occurs="?"/>
+    <element name="pixels-from-edge" type="int" occurs="?"/>
+    <ref label="reported" occurs="*"/>
+    <ref label="unofficial" occurs="?"/>
+    <ref label="discarded" occurs="?"/>
+    <ref label="preempted" occurs="?"/>
+    <ref label="imported" occurs="?"/>
+    <ref label="blending" occurs="*"/>
+    <element name="note" type="string" occurs="?"/>
+  </sequence>
+</elementRule>
+<tag name="mag-record"/>
+
+<elementRule role="reported">
+  <empty/>
+</elementRule>
+<tag name="reported">
+  <attribute name="to" type="string"/>
+</tag>
+
+<elementRule role="discarded">
+  <empty/>
+</elementRule>
+<tag name="discarded"/>
+
+<elementRule role="preempted">
+  <empty/>
+</elementRule>
+<tag name="preempted"/>
+
+<elementRule role="imported">
+  <empty/>
+</elementRule>
+<tag name="imported"/>
+
+<elementRule role="blending" type="string"/>
+<tag name="blending">
+  <attribute name="class" required="true" type="string"/>
+</tag>
+
+</module>

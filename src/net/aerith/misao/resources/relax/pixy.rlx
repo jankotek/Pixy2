@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="pixy"/>
+</interface>
+
+<include moduleLocation="standard.rlx"/>
+<include moduleLocation="standard-examination.rlx"/>
+<include moduleLocation="report.rlx"/>
+<include moduleLocation="batch.rlx"/>
+<include moduleLocation="information.rlx"/>
+<include moduleLocation="data.rlx"/>
+<include moduleLocation="mag.rlx"/>
+<include moduleLocation="position.rlx"/>
+<include moduleLocation="variability.rlx"/>
+<include moduleLocation="configuration.rlx"/>
+
+<elementRule role="pixy">
+  <sequence>
+    <ref label="report"/>
+    <ref label="batch"/>
+    <ref label="information-holder"/>
+    <ref label="record-holder"/>
+    <ref label="mag-record-holder"/>
+    <ref label="position-record-holder"/>
+    <ref label="variability-holder"/>
+  </sequence>
+</elementRule>
+<tag name="pixy"/>
+
+<elementRule role="information-holder">
+  <ref label="information" occurs="*"/>
+</elementRule>
+<tag name="information-holder"/>
+
+<elementRule role="record-holder">
+  <ref label="record" occurs="*"/>
+</elementRule>
+<tag name="record-holder"/>
+
+<elementRule role="mag-record-holder">
+  <ref label="mag-record" occurs="*"/>
+</elementRule>
+<tag name="mag-record-holder"/>
+
+<elementRule role="position-record-holder">
+  <ref label="position-record" occurs="*"/>
+</elementRule>
+<tag name="position-record-holder"/>
+
+<elementRule role="variability-holder">
+  <ref label="variability" occurs="*"/>
+</elementRule>
+<tag name="variability-holder"/>
+
+</module>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="report"/>
+</interface>
+
+<elementRule role="report">
+  <sequence>
+    <ref label="system"/>
+    <ref label="information"/>
+    <ref label="data"/>
+  </sequence>
+</elementRule>
+<tag name="report"/>
+
+<elementRule role="system">
+  <sequence>
+    <element name="version" type="string"/>
+    <ref label="examined-date"/>
+    <ref label="modified-date"/>
+  </sequence>
+</elementRule>
+<tag name="system"/>
+
+<elementRule role="examined-date" type="string"/>
+<tag name="examined-date"/>
+
+<elementRule role="modified-date" type="string"/>
+<tag name="modified-date"/>
+
+</module>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="batch"/>
+</interface>
+
+<elementRule role="batch">
+  <ref label="instruction" occurs="*"/>
+</elementRule>
+<tag name="batch"/>
+
+<elementRule role="instruction">
+  <sequence>
+    <ref label="image"/>
+    <ref label="date" occurs="?"/>
+    <ref label="exposure" occurs="?"/>
+    <element name="observer" type="string" occurs="?"/>
+    <ref label="center"/>
+    <ref label="fov"/>
+    <ref label="rotation" occurs="?"/>
+    <element name="limiting-mag" type="float" occurs="?"/>
+    <element name="upper-limit-mag" type="float" occurs="?"/>
+    <element name="filter" type="string" occurs="?"/>
+    <element name="chip" type="string" occurs="?"/>
+    <element name="instruments" type="string" occurs="?"/>
+    <ref label="base-catalog"/>
+    <ref label="reversed-image" occurs="?"/>
+    <ref label="sbig-image" occurs="?"/>
+    <ref label="unofficial" occurs="?"/>
+    <ref label="output" occurs="*"/>
+  </sequence>
+</elementRule>
+<tag name="instruction"/>
+
+<elementRule role="base-catalog" type="string"/>
+<tag name="base-catalog">
+  <attribute name="path" type="string"/>
+  <attribute name="limiting-mag" type="decimal"/>
+</tag>
+
+<elementRule role="output" type="string"/>
+<tag name="output">
+  <attribute name="type" required="true" type="string"/>
+</tag>
+
+</module>

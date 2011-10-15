@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<elementRule role="date" type="string"/>
+<tag name="date"/>
+
+<elementRule role="size">
+  <sequence>
+    <element name="width" type="int"/>
+    <element name="height" type="int"/>
+  </sequence>
+</elementRule>
+<tag name="size"/>
+
+<elementRule role="coor">
+  <hedgeRef label="ra-decl"/>
+</elementRule>
+<tag name="coor"/>
+
+<hedgeRule label="ra-decl">
+  <sequence>
+    <element name="ra" type="string"/>
+    <element name="decl" type="string"/>
+  </sequence>
+</hedgeRule>
+
+<elementRule role="position">
+  <sequence>
+    <element name="x" type="float"/>
+    <element name="y" type="float"/>
+  </sequence>
+</elementRule>
+<tag name="position"/>
+
+<elementRule role="rotation" type="float"/>
+<tag name="rotation">
+  <attribute name="unit" required="true" type="string"/>
+</tag>
+
+<elementRule role="pixel-size">
+  <sequence>
+    <element name="width" type="float"/>
+    <element name="height" type="float"/>
+  </sequence>
+</elementRule>
+<tag name="pixel-size">
+  <attribute name="unit" required="true" type="string"/>
+</tag>
+
+<elementRule role="astrometric-error">
+  <sequence>
+    <element name="ra" type="float"/>
+    <element name="decl" type="float"/>
+  </sequence>
+</elementRule>
+<tag name="astrometric-error">
+  <attribute name="unit" required="true" type="string"/>
+</tag>
+
+<elementRule role="mag" type="float"/>
+<tag name="mag">
+  <attribute name="upper-limit" type="string"/>
+  <attribute name="inaccurate" type="string"/>
+  <attribute name="order" type="integer"/>
+</tag>
+
+<elementRule role="unofficial">
+  <empty/>
+</elementRule>
+<tag name="unofficial"/>
+
+</module>

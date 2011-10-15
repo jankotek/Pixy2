@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="data"/>
+</interface>
+
+<elementRule role="data">
+  <ref label="star" occurs="*"/>
+</elementRule>
+<tag name="data"/>
+
+<elementRule role="star">
+  <ref label="record" occurs="+"/>
+</elementRule>
+<tag name="star">
+  <attribute name="name" required="true" type="ID"/>
+</tag>
+
+<elementRule role="record">
+  <sequence>
+    <element name="name" type="string" occurs="?"/>
+    <ref label="coor"/>
+    <ref label="position" occurs="?"/>
+    <ref label="item" occurs="*"/>
+  </sequence>
+</elementRule>
+<tag name="record">
+  <attribute name="class" required="true" type="string"/>
+</tag>
+
+<elementRule role="item" type="string"/>
+<tag name="item">
+  <attribute name="key" required="true" type="string"/>
+</tag>
+
+</module>

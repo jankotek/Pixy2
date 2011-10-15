@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<elementRule role="image" type="string"/>
+<tag name="image">
+  <attribute name="format" type="string"/>
+  <attribute name="order" type="string"/>
+</tag>
+
+<elementRule role="exposure" type="float"/>
+<tag name="exposure">
+  <attribute name="unit" required="true" type="string"/>
+</tag>
+
+<elementRule role="center">
+  <hedgeRef label="ra-decl"/>
+</elementRule>
+<tag name="center"/>
+
+<elementRule role="fov">
+  <sequence>
+    <element name="width" type="float"/>
+    <element name="height" type="float"/>
+  </sequence>
+</elementRule>
+<tag name="fov">
+  <attribute name="unit" required="true" type="string"/>
+</tag>
+
+<elementRule role="reversed-image">
+  <empty/>
+</elementRule>
+<tag name="reversed-image"/>
+
+<elementRule role="sbig-image">
+  <empty/>
+</elementRule>
+<tag name="sbig-image"/>
+
+<elementRule role="photometry">
+  <sequence>
+    <ref label="catalog"/>
+    <element name="type" type="string"/>
+    <element name="system-formula" type="string" occurs="?"/>
+  </sequence>
+</elementRule>
+<tag name="photometry"/>
+
+<elementRule role="astrometry">
+  <sequence>
+    <ref label="catalog"/>
+    <element name="equinox" type="string"/>
+  </sequence>
+</elementRule>
+<tag name="astrometry"/>
+
+<elementRule role="catalog" type="string"/>
+<tag name="catalog">
+  <attribute name="path" type="string"/>
+</tag>
+
+</module>

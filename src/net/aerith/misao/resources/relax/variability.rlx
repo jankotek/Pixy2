@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="variability"/>
+</interface>
+
+<elementRule role="variability">
+  <sequence>
+    <ref label="record" occurs="+"/>
+    <ref label="mag-record" occurs="+"/>
+  </sequence>
+</elementRule>
+<tag name="variability"/>
+
+</module>

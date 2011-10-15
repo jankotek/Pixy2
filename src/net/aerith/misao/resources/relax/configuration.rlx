@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE module SYSTEM "relaxCore.dtd">
+
+<module relaxCoreVersion="1.0">
+
+<interface>
+  <export label="configuration"/>
+</interface>
+
+<elementRule role="configuration">
+  <sequence>
+    <ref label="catalog-path" occurs="*"/>
+    <ref label="image-config" occurs="?"/>
+  </sequence>
+</elementRule>
+<tag name="configuration"/>
+
+<elementRule role="catalog-path">
+  <sequence>
+    <element name="catalog" type="string"/>
+    <element name="path" type="string"/>
+  </sequence>
+</elementRule>
+<tag name="catalog-path"/>
+
+<elementRule role="image-config">
+  <sequence>
+    <element name="fits-order" type="string" occurs="?"/>
+  </sequence>
+</elementRule>
+<tag name="image-config"/>
+
+</module>
