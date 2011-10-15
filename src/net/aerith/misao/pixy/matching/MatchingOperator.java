@@ -156,7 +156,7 @@ public class MatchingOperator extends Operation {
 			String[] paths = Format.separatePath(catalog_path);
 			for (int i = 0 ; i < paths.length ; i++) {
 				try {
-					catalog_reader.addURL(new File(paths[i]).toURL());
+					catalog_reader.addURL(new File(paths[i]).toURI().toURL());
 				} catch ( MalformedURLException exception ) {
 					System.err.println(exception);
 				}

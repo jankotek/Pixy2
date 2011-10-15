@@ -22,7 +22,7 @@ public class RContext {
      * @exception java.net.MalformedURLException
      */
     public RContext(java.io.File file) throws java.net.MalformedURLException {
-        baseURL = file.toURL();
+        baseURL = file.toURI().toURL();
     }
 
     /**

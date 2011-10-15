@@ -46,7 +46,7 @@ public class UnsignedFitsFilter extends FitsFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new UnsignedFits(file.toURL());
+		return new UnsignedFits(file.toURI().toURL());
 	}
 
 	/**

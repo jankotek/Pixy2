@@ -58,7 +58,7 @@ public class FitsFilter extends ImageFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new Fits(file.toURL());
+		return new Fits(file.toURI().toURL());
 	}
 
 	/**

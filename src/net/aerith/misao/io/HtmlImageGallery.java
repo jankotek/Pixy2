@@ -182,7 +182,7 @@ public class HtmlImageGallery {
 				ps_index.println("<IMG SRC=\"" + filename.replace('\\', '/') + "\" ALT=\"\" WIDTH=\"" + image.getSize().getWidth() + "\" HEIGHT=\"" + image.getSize().getHeight() + "\">");
 
 			File file = new File(FileManager.unitePath(folder.getAbsolutePath(), filename));
-			format.setURL(file.toURL());
+			format.setURL(file.toURI().toURL());
 
 			LevelAdjustmentSet set = new DefaultLevelAdjustmentSet(image);
 
@@ -200,7 +200,7 @@ public class HtmlImageGallery {
 
 					file = new File(FileManager.unitePath(folder.getAbsolutePath(), filename));
 					format = anchors[i].getFormat();
-					format.setURL(file.toURL());
+					format.setURL(file.toURI().toURL());
 
 					format.save(anchors[i].getImage());
 				} catch ( Exception exception ) {

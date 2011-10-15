@@ -644,7 +644,7 @@ public class MainFrame extends BaseFrame {
 					String[] paths = net.aerith.misao.util.Format.separatePath(dialog.getCatalogPath());
 					for (int i = 0 ; i < paths.length ; i++) {
 						try {
-							reader.addURL(new File(paths[i]).toURL());
+							reader.addURL(new File(paths[i]).toURI().toURL());
 						} catch ( MalformedURLException exception ) {
 							System.err.println(exception);
 						}
@@ -724,7 +724,7 @@ public class MainFrame extends BaseFrame {
 					String[] paths = net.aerith.misao.util.Format.separatePath(dialog.getCatalogPath());
 					for (int i = 0 ; i < paths.length ; i++) {
 						try {
-							reader.addURL(new File(paths[i]).toURL());
+							reader.addURL(new File(paths[i]).toURI().toURL());
 						} catch ( MalformedURLException exception ) {
 							System.err.println(exception);
 						}
@@ -840,7 +840,7 @@ public class MainFrame extends BaseFrame {
 					String[] paths = net.aerith.misao.util.Format.separatePath(dialog.getBaseCatalogPath());
 					for (int i = 0 ; i < paths.length ; i++) {
 						try {
-							reader_base.addURL(new File(paths[i]).toURL());
+							reader_base.addURL(new File(paths[i]).toURI().toURL());
 						} catch ( MalformedURLException exception ) {
 							System.err.println(exception);
 						}
@@ -858,7 +858,7 @@ public class MainFrame extends BaseFrame {
 					paths = net.aerith.misao.util.Format.separatePath(dialog.getReferenceCatalogPath());
 					for (int i = 0 ; i < paths.length ; i++) {
 						try {
-							reader_reference.addURL(new File(paths[i]).toURL());
+							reader_reference.addURL(new File(paths[i]).toURI().toURL());
 						} catch ( MalformedURLException exception ) {
 							System.err.println(exception);
 						}

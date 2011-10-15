@@ -93,7 +93,7 @@ public class SbigFilter extends ImageFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new Sbig(file.toURL());
+		return new Sbig(file.toURI().toURL());
 	}
 
 	/**

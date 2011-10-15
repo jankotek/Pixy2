@@ -115,7 +115,7 @@ public class ImageConversionOperation extends MultiTaskOperation {
 			}
 		}
 
-		ImageGalleryElement element = new ImageGalleryElement(image, new File(record.output_image).toURL(), record.output_format);
+		ImageGalleryElement element = new ImageGalleryElement(image, new File(record.output_image).toURI().toURL(), record.output_format);
 		element.setTitle(record.getFile().getPath());
 		gallery.addElement(element);
 	}

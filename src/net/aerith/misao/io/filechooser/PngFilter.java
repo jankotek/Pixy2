@@ -47,7 +47,7 @@ public class PngFilter extends JimiFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new Png(file.toURL());
+		return new Png(file.toURI().toURL());
 	}
 
 	/**

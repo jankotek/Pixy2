@@ -58,7 +58,7 @@ public class JpegFilter extends JimiFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new Jpeg(file.toURL());
+		return new Jpeg(file.toURI().toURL());
 	}
 
 	/**

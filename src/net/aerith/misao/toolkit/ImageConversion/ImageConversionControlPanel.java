@@ -87,7 +87,7 @@ public class ImageConversionControlPanel extends ControlPanel {
 				try {
 					format = file_chooser.getSelectedFileFormat();
 				} catch ( UnsupportedFileTypeException exception ) {
-					format = new Fits(file.toURL());
+					format = new Fits(file.toURI().toURL());
 				}
 
 				table.addImage(file, format);

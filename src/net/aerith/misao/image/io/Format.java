@@ -61,7 +61,7 @@ public abstract class Format {
 		// If the file extension is ".fts" or so, the FITS format
 		// should be selected, not the unsigned FITS format.
 		if (new FitsFilter().accept(file))
-			return new Fits(file.toURL());
+			return new Fits(file.toURI().toURL());
 
 		ImageFileFilter[] filters = ImageFileFilter.getSupportedFilters();
 		for (int i = 0 ; i < filters.length ; i++) {
@@ -69,7 +69,7 @@ public abstract class Format {
 				return filters[i].getFormat(file);
 		}
 
-		throw new UnsupportedFileTypeException(file.toURL(), "", "create format");
+		throw new UnsupportedFileTypeException(file.toURI().toURL(), "", "create format");
 	}
 
 	/**

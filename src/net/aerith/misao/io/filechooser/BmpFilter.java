@@ -47,7 +47,7 @@ public class BmpFilter extends JimiFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new Bmp(file.toURL());
+		return new Bmp(file.toURI().toURL());
 	}
 
 	/**

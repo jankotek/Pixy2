@@ -46,7 +46,7 @@ public class RawGrayFilter extends ImageFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new RawGray(file.toURL());
+		return new RawGray(file.toURI().toURL());
 	}
 
 	/**

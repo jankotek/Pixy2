@@ -46,7 +46,7 @@ public class PpmFilter extends ImageFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new Ppm(file.toURL());
+		return new Ppm(file.toURI().toURL());
 	}
 
 	/**

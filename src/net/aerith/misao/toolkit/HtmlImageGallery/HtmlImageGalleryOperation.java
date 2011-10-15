@@ -424,7 +424,7 @@ public class HtmlImageGalleryOperation extends MultiTaskOperation {
 					dis.close();
 					dos.close();
 
-					Gif gif = new Gif(file_dss_gif.toURL());
+					Gif gif = new Gif(file_dss_gif.toURI().toURL());
 					MonoImage image = gif.read();
 
 					file_dss_gif.delete();
@@ -436,8 +436,8 @@ public class HtmlImageGalleryOperation extends MultiTaskOperation {
 					current_index++;
 
 					File file = new File(String.valueOf(current_index) + ".png");
-					net.aerith.misao.image.io.Format format = new Png(file.toURL());
-					ImageGalleryElement element = new ImageGalleryElement(image, file.toURL(), format);
+					net.aerith.misao.image.io.Format format = new Png(file.toURI().toURL());
+					ImageGalleryElement element = new ImageGalleryElement(image, file.toURI().toURL(), format);
 
 					String fov_width = net.aerith.misao.util.Format.formatDouble(15.0 / 530.0 * (double)getImageSize().getWidth(), 7, 5).trim();
 					String fov_height = net.aerith.misao.util.Format.formatDouble(15.0 / 530.0 * (double)getImageSize().getHeight(), 7, 5).trim();
@@ -506,8 +506,8 @@ public class HtmlImageGalleryOperation extends MultiTaskOperation {
 		MonoImage[] images = creater.create(mag_records);
 
 		File file = new File(String.valueOf(current_index) + ".png");
-		net.aerith.misao.image.io.Format format = new Png(file.toURL());
-		ImageGalleryElement element = new ImageGalleryElement(images[0], file.toURL(), format);
+		net.aerith.misao.image.io.Format format = new Png(file.toURI().toURL());
+		ImageGalleryElement element = new ImageGalleryElement(images[0], file.toURI().toURL(), format);
 
 		// Creates the thumbnail FITS image, too.
 		if (create_fits) {
@@ -517,9 +517,9 @@ public class HtmlImageGalleryOperation extends MultiTaskOperation {
 			images = creater.create(mag_records);
 
 			file = new File(String.valueOf(current_index) + ".fts");
-			format = new Fits(file.toURL());
+			format = new Fits(file.toURI().toURL());
 
-			HtmlImageAnchor anchor = new HtmlImageAnchor(images[0], file.toURL(), format, "FITS image");
+			HtmlImageAnchor anchor = new HtmlImageAnchor(images[0], file.toURI().toURL(), format, "FITS image");
 			element.addImageAnchor(anchor);
 
 			// Restores the resulution/magnification.

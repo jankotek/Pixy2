@@ -58,7 +58,7 @@ public class TiffFilter extends JimiFileFilter {
 	public Format getFormat ( File file )
 		throws MalformedURLException, UnsupportedFileTypeException
 	{
-		return new Tiff(file.toURL());
+		return new Tiff(file.toURI().toURL());
 	}
 
 	/**

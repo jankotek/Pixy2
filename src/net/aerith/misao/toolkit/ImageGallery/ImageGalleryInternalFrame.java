@@ -200,7 +200,7 @@ public class ImageGalleryInternalFrame extends BaseInternalFrame implements Leve
 						filename = FileManager.unitePath(directory.getAbsolutePath(), filename);
 
 						File file = new File(filename);
-						Fits fits = new Fits(file.toURL());
+						Fits fits = new Fits(file.toURI().toURL());
 
 						image_panel.save(fits);
 					}

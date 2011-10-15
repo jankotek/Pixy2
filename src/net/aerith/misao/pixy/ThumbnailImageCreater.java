@@ -379,7 +379,7 @@ public class ThumbnailImageCreater extends OperationObservable {
 				filename = FileManager.unitePath(set.folder.getPath(), filename);
 
 				File file = new File(filename);
-				Fits fits = new Fits(file.toURL());
+				Fits fits = new Fits(file.toURI().toURL());
 				fits.save(thumbnail_image);
 
 				file_list.addElement(file);

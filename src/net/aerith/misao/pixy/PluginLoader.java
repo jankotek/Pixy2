@@ -87,7 +87,7 @@ public class PluginLoader {
 				directory = new File(".");
 
 			URL[] urls = new URL[1];
-			urls[0] = directory.toURL();
+			urls[0] = directory.toURI().toURL();
 			URLClassLoader class_loader = new URLClassLoader(urls);
 
 			if (directory.isDirectory()) {

@@ -232,7 +232,7 @@ public class XmlReport extends net.aerith.misao.xml.relaxer.XmlReport {
 		throws IOException, FileNotFoundException
 	{
 		URLSet url_set = new URLSet();
-		url_set.addURL(file.toURL());
+		url_set.addURL(file.toURI().toURL());
 
 		Reader in = Decoder.newReader(url_set.exists());
 

@@ -393,7 +393,7 @@ public class ImageConversionTable extends FileOperationTable {
 					try {
 						format = file_chooser.getSelectedFileFormat();
 					} catch ( UnsupportedFileTypeException exception ) {
-						format = new Fits(file.toURL());
+						format = new Fits(file.toURI().toURL());
 					}
 
 					if (object != null) {
@@ -516,7 +516,7 @@ public class ImageConversionTable extends FileOperationTable {
 					if (object != null) {
 						ImageRecord record = (ImageRecord)object;
 						record.output_image = value;
-						record.output_format.setURL(new File(record.output_image).toURL());
+						record.output_format.setURL(new File(record.output_image).toURI().toURL());
 					}
 				}
 			} catch ( MalformedURLException exception ) {
@@ -730,7 +730,7 @@ public class ImageConversionTable extends FileOperationTable {
 					try {
 						format = Format.create(files[i]);
 					} catch ( UnsupportedFileTypeException exception ) {
-						format = new Fits(files[i].toURL());
+						format = new Fits(files[i].toURI().toURL());
 					}
 					addImage(files[i], format);
 				} catch ( FileNotFoundException exception ) {

@@ -95,7 +95,7 @@ public class IdentifiedStarSearchOperation extends ReportBatchOperation {
 			String[] paths = net.aerith.misao.util.Format.separatePath(dialog.getCatalogPath());
 			for (int i = 0 ; i < paths.length ; i++) {
 				try {
-					reader.addURL(new File(paths[i]).toURL());
+					reader.addURL(new File(paths[i]).toURI().toURL());
 				} catch ( MalformedURLException exception ) {
 					System.err.println(exception);
 				}

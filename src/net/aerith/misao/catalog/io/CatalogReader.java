@@ -64,7 +64,7 @@ public abstract class CatalogReader {
 		String[] paths = Format.separatePath(default_path);
 		for (int i = 0 ; i < paths.length ; i++) {
 			try {
-				url_set.addURL(new File(paths[i]).toURL());
+				url_set.addURL(new File(paths[i]).toURI().toURL());
 			} catch ( MalformedURLException exception ) {
 				System.err.println(exception);
 			}
